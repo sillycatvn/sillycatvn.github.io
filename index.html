@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sillycat</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+let cart = [];
+
+function addToCart(name, price) {
+    cart.push({
+        name: name,
+        price: price
+    });
+
+    document.getElementById("cart-count").innerText = cart.length;
+
+    alert(name + " đã được thêm vào giỏ hàng!");
+}
+
+function showCart() {
+    if (cart.length === 0) {
+        alert("Giỏ hàng đang trống!");
+        return;
+    }
+
+    let message = "🛒 GIỎ HÀNG\n\n";
+    let total = 0;
+
+    cart.forEach(item => {
+        message += item.name + " - " +
+            item.price.toLocaleString() + "đ\n";
+        total += item.price;
+    });
+
+    message += "\nTổng cộng: " +
+        total.toLocaleString() + "đ";
+
+    if (confirm(message + "\n\nNhấn OK để thanh toán qua Zalo")) {
+    window.open("https://zalo.me/84399597209");
+}
+}
+
+function openCheckout() {    document.getElementById("checkout-box").style.display = "block";
+}
+
+function closeCheckout() {
+    document.getElementById("checkout-box").style.display = "none";
+}
+</script>
+
+<body>
+
+    <div class="sale-banner">
+    🎉 GIẢM GIÁ 20% TOÀN BỘ ĐỒ NGỦ - FREESHIP ĐƠN TỪ 500K 🎉
+</div>
+
+   <header>
+    <img src="images/logo.jpg" alt="Sillycat Sleepwear" class="logo">
+
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#collections">Bộ sưu tập</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#contact">Liên hệ</a>
+        <a href="javascript:void(0)" onclick="showCart()">
+    🛒 Giỏ hàng (<span id="cart-count">0</span>)
+</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h2>Đồ ngủ nữ cao cấp</h2>
+
+        <p>
+            Thoải mái, nữ tính và đáng yêu mỗi ngày.
+        </p>
+
+        <button onclick="addToCart('Váy ngủ dễ thương', 299000)">
+    Thêm vào giỏ
+</button>
+    </section>
+    <section class="collections" id="collections">
+
+    <h2>Bộ sưu tập nổi bật</h2>
+
+    <div class="collection-list">
+
+        <div class="collection-card">
+            <img src="https://picsum.photos/400/300?1">
+            <h3>Dreamy Pink</h3>
+        </div>
+
+        <div class="collection-card">
+            <img src="https://picsum.photos/400/300?2">
+            <h3>Summer Cotton</h3>
+        </div>
+
+        <div class="collection-card">
+            <img src="https://picsum.photos/400/300?3">
+            <h3>Luxury Silk</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="products">
+
+    <h2>Sản phẩm nổi bật</h2>
+
+    <div class="product-list">
+        ...
+    </div>
+
+</section>
+
+    <h2>Sản phẩm nổi bật</h2>
+
+    <div class="product-list">
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300/400?1">
+            <h3>Bộ đồ ngủ lụa hồng</h3>
+            <p>399.000đ</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300/400?2">
+            <h3>Váy ngủ dễ thương</h3>
+            <p>299.000đ</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300/400?3">
+            <h3>Bộ cotton cao cấp</h3>
+            <p>459.000đ</p>
+        </div>
+
+    </div>
+    </section>
+
+<section class="contact" id="contact">
+    <h2>Liên hệ</h2>
+
+    <p>📍 Địa chỉ: Gò Vấp, Hồ Chí Minh</p>
+    <p>💬 Zalo: 0399 597 209</p>
+    <p>📞 Hotline: 0399 597 209</p>
+    <p>📧 Email: vicuatui.220701@gmail.com</p>
+    <p>📘 Facebook: https://www.facebook.com/share/1928fWSV6V/</p>
+    <p>📷 Instagram: https://www.instagram.com/dongusiuxinh?igsh=MXF6eGpoZHZ0OHowOQ==</p>
+
+</section>
+
+<footer>
+    <p>© 2026 SillyCat Sleepwear</p>
+    <p>📞 Hotline: 0399 597 209</p>
+    <p>📸 Instagram: @sillycat.sleepwear</p>
+    <p>💬 Zalo: 0399 597 209</p>
+</footer>
+
+<div id="checkout-box" style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+z-index:9999;
+text-align:center;
+">
+
+<h2>Thanh toán</h2>
+
+<p>Liên hệ Zalo để xác nhận đơn hàng:</p>
+
+<a href="https://zalo.me/84399597209" target="_blank">
+    <button style="
+    background:#ff4f9a;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    ">
+        Thanh toán qua Zalo
+    </button>
+</a>
+
+<br><br>
+
+<button onclick="closeCheckout()">
+    Đóng
+</button>
+
+
+</div>
+
+</body>
+</html>
