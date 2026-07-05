@@ -7,7 +7,27 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <script>
+    function changeImageTrang(src) {
+    document.getElementById("main-image-trang").src = src;
+}
+    function changeImageXanh(src) {
+    document.getElementById("main-image-xanh").src = src;
+}
+    function changeImage(src) {
+    document.getElementById("main-image").src = src;
+}
+function changeImageHong(src) {
+    document.getElementById("main-image-hong").src = src;
+}
+function changeImageKem(src) {
+    document.getElementById("main-image-kem").src = src;
+}
+function changeImagePremium(src) {
+    document.getElementById("main-image-premium").src = src;
+}
+
 let cart = [];
 
 function addToCart(name, price) {
@@ -50,6 +70,9 @@ function openCheckout() {    document.getElementById("checkout-box").style.displ
 function closeCheckout() {
     document.getElementById("checkout-box").style.display = "none";
 }
+function changeImage(imagePath) {
+    document.getElementById("main-image").src = imagePath;
+}
 </script>
 
 <body>
@@ -76,13 +99,471 @@ function closeCheckout() {
         <h2>Đồ ngủ nữ cao cấp</h2>
 
         <p>
-            Thoải mái, nữ tính và đáng yêu mỗi ngày.
-        </p>
+            Thoải mái, nữ tính và đáng yêu mỗi ngày.</p>
 
-        <button onclick="addToCart('Váy ngủ dễ thương', 299000)">
-    Thêm vào giỏ
+<div class="products-container">
+
+      <div class="product-card">
+
+    <img id="main-image"
+     src="images/gau-dau-1.jpg"
+     alt="Set đồ ngủ Gấu Dâu">
+
+<div class="thumbnail-list">
+    <img src="images/gau-dau-1.jpg"
+         onclick="changeImage('images/gau-dau-1.jpg')">
+
+    <img src="images/gau-dau-2.jpg"
+         onclick="changeImage('images/gau-dau-2.jpg')">
+</div>
+
+    <h3>🐻🍓 Set đồ ngủ Gấu Dâu</h3>
+
+    <p>
+        <del>169.000đ</del>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Set đồ ngủ họa tiết gấu và trái tim siêu đáng yêu,
+        thiết kế nữ tính với tay áo và quần bèo nhún mềm mại,
+        chất vải thoáng mát và thoải mái khi mặc.
+    </p>
+
+    <button onclick="addToCart('Set đồ ngủ Gấu Dâu', 149000)">
+        Thêm vào giỏ
+    </button>
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+    ⚡ Mua ngay
 </button>
+
+</div>
+
+<div class="product-card">
+
+    <img id="main-image-hong"
+     src="images/gau-hong-1.jpg"
+     alt="Set đồ ngủ Gấu Hồng">
+
+<div class="thumbnail-list">
+    <img src="images/gau-hong-1.jpg"
+         onclick="changeImageHong('images/gau-hong-1.jpg')">
+
+    <img src="images/gau-hong-2.jpg"
+         onclick="changeImageHong('images/gau-hong-2.jpg')">
+</div>
+
+    <h3>🧸🌸 Set đồ ngủ Gấu Hồng</h3>
+
+    <p>
+        <del>169.000đ</del>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Bộ đồ ngủ màu hồng pastel siêu nữ tính,
+        họa tiết gấu đáng yêu, chất vải mềm mại,
+        thiết kế bèo nhún nhẹ nhàng và thoải mái khi mặc.
+    </p>
+
+    <button onclick="addToCart('Set đồ ngủ Gấu Hồng', 169000)">
+        Thêm vào giỏ
+    </button>
+
+</div>
+
+<div class="product-card">
+
+    <img id="main-image-premium"
+    src="images/gau-premium-1.jpg"
+    alt="Set đồ ngủ Gấu Hồng Premium">
+
+    <div class="thumbnail-list">
+        <img src="images/gau-premium-1.jpg"
+        onclick="changeImagePremium('images/gau-premium-1.jpg')">
+
+        <img src="images/gau-premium-2.jpg"
+        onclick="changeImagePremium('images/gau-premium-2.jpg')">
+    </div>
+
+    <h3>🐻🎀 Set đồ ngủ Gấu Hồng Premium</h3>
+
+    <p>
+        <del>169.000đ</del>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Thiết kế bèo nhún nữ tính,
+        cổ chữ V thanh lịch, chất vải mềm mại,
+        thoáng mát và cực kỳ dễ thương khi mặc.
+    </p>
+
+    <button onclick="addToCart('Set đồ ngủ Gấu Hồng Premium', 189000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+    style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+
+<div class="product-card">
+
+    <img id="main-image-kem"
+         src="images/gau-kem-1.jpg"
+         alt="Set đồ ngủ Gấu Kem">
+
+    <div class="thumbnail-list">
+        <img src="images/gau-kem-1.jpg"
+             onclick="changeImageKem('images/gau-kem-1.jpg')">
+
+        <img src="images/gau-kem-2.jpg"
+             onclick="changeImageKem('images/gau-kem-2.jpg')">
+    </div>
+
+    <h3>🧸🤍 Set đồ ngủ Gấu Kem</h3>
+
+    <p>
+        <del>169.000đ</del>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Tông màu kem hồng nhẹ nhàng,
+        họa tiết gấu đáng yêu,
+        thiết kế bèo nhún nữ tính,
+        mềm mại và thoải mái khi mặc.
+    </p>
+
+    <button onclick="addToCart('Set đồ ngủ Gấu Kem', 179000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+
+<div class="product-card">
+
+    <img id="main-image-xanh"
+         src="images/gau-xanh-1.jpg"
+         alt="Set đồ ngủ Gấu Xanh Pastel">
+
+    <div class="thumbnail-list">
+        <img src="images/gau-xanh-1.jpg"
+             onclick="changeImageXanh('images/gau-xanh-1.jpg')">
+
+        <img src="images/gau-xanh-2.jpg"
+             onclick="changeImageXanh('images/gau-xanh-2.jpg')">
+    </div>
+
+    <h3>🧸 Set đồ ngủ Gấu Xanh Pastel</h3>
+
+    <p>
+        <del>169.000đ</del>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Tông xanh pastel dịu mắt,
+        họa tiết gấu đáng yêu,
+        thiết kế bèo nhún nữ tính,
+        chất vải mềm mại và thoáng mát.
+    </p>
+
+    <button onclick="addToCart('Set đồ ngủ Gấu Xanh Pastel', 179000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+
+<div class="product-card">
+
+    <img id="main-image-trang"
+         src="images/gau-trang-1.jpg"
+         alt="Set đồ ngủ Gấu Trắng">
+
+    <div class="thumbnail-list">
+        <img src="images/gau-trang-1.jpg"
+             onclick="changeImageTrang('images/gau-trang-1.jpg')">
+
+        <img src="images/gau-trang-2.jpg"
+             onclick="changeImageTrang('images/gau-trang-2.jpg')">
+    </div>
+
+    <h3>🧸🤍 Set đồ ngủ Gấu Trắng</h3>
+
+    <p>
+        <del>169.000đ</del>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Tông trắng kem thanh lịch,
+        họa tiết gấu nâu dễ thương,
+        thiết kế bèo nhún nữ tính,
+        mang lại cảm giác nhẹ nhàng và thoải mái.
+    </p>
+
+    <button onclick="addToCart('Set đồ ngủ Gấu Trắng', 179000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+
+<div class="product-card">
+
+    <img id="hello-kitty-main"
+         src="images/hello-kitty-dau-tay.jpg"
+         alt="Bộ ngủ Hello Kitty Dâu Tây">
+
+   <div class="thumbnail-list">
+    <img src="images/hello-kitty-dau-tay.jpg"
+         onclick="document.getElementById('hello-kitty-main').src='images/hello-kitty-dau-tay.jpg'">
+
+    <img src="images/hello-kitty-dau-tay2.jpg"
+         onclick="document.getElementById('hello-kitty-main').src='images/hello-kitty-dau-tay2.jpg'">
+
+    <img src="images/hello-kitty-dau-tay3.jpg"
+         onclick="document.getElementById('hello-kitty-main').src='images/hello-kitty-dau-tay3.jpg'">
+</div>
+    
+
+    <h3>🍓🐱 Bộ ngủ Hello Kitty Dâu Tây</h3>
+
+    <p>
+        <del>169.000đ</del><br>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Họa tiết Hello Kitty và dâu tây ngọt ngào,<br>
+        chất vải mềm mịn, thoáng mát,<br>
+        thiết kế bèo nhún nữ tính,<br>
+        form rộng thoải mái khi mặc ở nhà.
+    </p>
+
+    <button onclick="addToCart('Bộ ngủ Hello Kitty Dâu Tây', 149000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+<div class="product-card">
+
+    <img id="gau-vang-main"
+         src="images/gau-vang-1.jpg"
+         alt="Bộ ngủ Gấu Vàng Caro">
+
+    <div class="thumbnail-list">
+
+    <img src="images/gau-vang-1.jpg"
+         onclick="document.getElementById('gau-vang-main').src='images/gau-vang-1.jpg'">
+
+    <img src="images/gau-vang-2.jpg"
+         onclick="document.getElementById('gau-vang-main').src='images/gau-vang-2.jpg'">
+
+    <img src="images/gau-vang-3.jpg"
+         onclick="document.getElementById('gau-vang-main').src='images/gau-vang-3.jpg'">
+
+</div>
+
+    <h3>🧸💛 Bộ ngủ Gấu Vàng Caro</h3>
+
+    <p>
+        <del>169.000đ</del><br>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Họa tiết gấu nâu trên nền caro vàng dịu dàng,<br>
+        chất vải mềm mịn, thoáng mát,<br>
+        thiết kế bèo nhún nữ tính,<br>
+        form rộng thoải mái khi mặc ở nhà.
+    </p>
+
+    <button onclick="addToCart('Bộ ngủ Gấu Vàng Caro', 149000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+<div class="product-card">
+
+    <img id="gaucaroxanh-main"
+         src="images/gaucaroxanh1.jpg"
+         alt="Bộ ngủ Gấu Caro Xanh">
+
+    <div class="thumbnail-list">
+        <img src="images/gaucaroxanh1.jpg"
+             onclick="document.getElementById('gaucaroxanh-main').src='images/gaucaroxanh1.jpg'">
+
+        <img src="images/gaucaroxanh2.jpg"
+             onclick="document.getElementById('gaucaroxanh-main').src='images/gaucaroxanh2.jpg'">
+    </div>
+
+    <h3>🩵🐻 Bộ ngủ Gấu Caro Xanh</h3>
+
+    <p>
+        <del>169.000đ</del><br>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Tông xanh pastel dịu mắt,
+        họa tiết gấu đáng yêu,
+        chất vải mềm mại, thoáng mát,
+        form rộng thoải mái khi mặc ở nhà.
+    </p>
+
+    <button onclick="addToCart('Bộ ngủ Gấu Caro Xanh', 149000)">
+        Thêm vào giỏ
+    </button>
+
+    <button
+        onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+<div class="product-card">
+
+    <img id="gau-hong-main"
+         src="images/gaucarohong1.jpg"
+         alt="Bộ ngủ Gấu Caro Hồng">
+
+    <div class="thumbnail-list">
+        <img src="images/gaucarohong1.jpg"
+             onclick="document.getElementById('gau-hong-main').src='images/gaucarohong1.jpg'">
+
+        <img src="images/gaucarohong2.jpg"
+             onclick="document.getElementById('gau-hong-main').src='images/gaucarohong2.jpg'">
+
+        <img src="images/gaucarohong3.jpg"
+             onclick="document.getElementById('gau-hong-main').src='images/gaucarohong3.jpg'">
+    </div>
+
+    <h3>🧸🌸 Bộ ngủ Gấu Caro Hồng</h3>
+
+    <p>
+        <del>169.000đ</del><br>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Họa tiết gấu đáng yêu trên nền caro hồng ngọt ngào,
+        chất vải mềm mại, thoáng mát,
+        thiết kế bèo tầng nữ tính,
+        phù hợp mặc nhà và ngủ nghỉ.
+    </p>
+
+    <button onclick="addToCart('Bộ ngủ Gấu Caro Hồng', 149000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+            style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+<div class="product-card">
+
+    <img id="gaucarovang-main"
+         src="images/gaucarovang1.jpg"
+         alt="Set đồ ngủ Gấu Caro Vàng">
+
+    <div class="thumbnail-list">
+        <img src="images/gaucarovang1.jpg"
+             onclick="document.getElementById('gaucarovang-main').src='images/gaucarovang1.jpg'">
+
+        <img src="images/gaucarovang2.jpg"
+             onclick="document.getElementById('gaucarovang-main').src='images/gaucarovang2.jpg'">
+    </div>
+
+    <h3>🐻💛 Set đồ ngủ Gấu Caro Vàng</h3>
+
+    <p>
+        <del>169.000đ</del><br>
+        <strong>149.000đ</strong>
+    </p>
+
+    <p>
+        Họa tiết gấu đáng yêu trên nền caro vàng nhạt,
+        thiết kế bèo nữ tính, tay phồng nhẹ,
+        chất vải mềm mịn và thoáng mát khi mặc ở nhà.
+    </p>
+
+    <button onclick="addToCart('Set đồ ngủ Gấu Caro Vàng', 149000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+<div class="product-card">
+
+    <img src="images/gaucaro-combo.jpg"
+         alt="Combo 4 bộ Gấu Caro">
+
+    <h3>🐻🌈 Combo 4 bộ Gấu Caro</h3>
+
+    <p>
+        <del>676.000đ</del><br>
+        <strong>555.000đ</strong>
+    </p>
+
+    <p>
+        Combo gồm 4 màu cực xinh:
+        💛 Vàng nhạt,
+        🧡 Vàng caro,
+        💙 Xanh baby,
+        💗 Hồng pastel.
+        Chất vải mềm mịn, mặc thoải mái, siêu đáng yêu.
+    </p>
+
+    <button onclick="addToCart('Combo 4 bộ Gấu Caro', 555000)">
+        Thêm vào giỏ
+    </button>
+
+    <button onclick="openCheckout()"
+        style="background:#ff3366; margin-top:10px;">
+        ⚡ Mua ngay
+    </button>
+
+</div>
+
     </section>
+
     <section class="collections" id="collections">
 
     <h2>Bộ sưu tập nổi bật</h2>
