@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sillycat</title>
+
+    <title>SillyCat Sleepwear | Đồ ngủ nữ dễ thương, pyjama gấu caro</title>
+
+    <meta name="description"
+          content="SillyCat Sleepwear chuyên đồ ngủ nữ dễ thương, pyjama gấu caro, đồ ngủ cotton mềm mại, nhiều mẫu độc quyền và siêu đáng yêu.">
+
+    <meta name="keywords"
+          content="đồ ngủ nữ, pyjama nữ, đồ ngủ gấu caro, đồ ngủ dễ thương, sillycat sleepwear, pijama nữ, đồ ngủ cotton">
+
+    <meta name="author" content="SillyCat Sleepwear">
+
+    <link rel="canonical" href="https://sillycatvn.github.io/">
+
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <script>
+    function goToCheckout() {
+    window.location.href = "checkout.html";
+}
     function changeImageTrang(src) {
     document.getElementById("main-image-trang").src = src;
 }
@@ -36,6 +52,8 @@ function addToCart(name, price) {
         price: price
     });
 
+    localStorage.setItem("cart", JSON.stringify(cart));
+
     document.getElementById("cart-count").innerText = cart.length;
 
     alert(name + " đã được thêm vào giỏ hàng!");
@@ -59,8 +77,11 @@ function showCart() {
     message += "\nTổng cộng: " +
         total.toLocaleString() + "đ";
 
-    if (confirm(message + "\n\nNhấn OK để thanh toán qua Zalo")) {
-    window.open("https://zalo.me/84399597209");
+    if (confirm(message + "\n\nNhấn OK để chuyển sang trang thanh toán")) {
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.location.href = "checkout.html";
 }
 }
 
@@ -372,24 +393,24 @@ function changeImage(imagePath) {
 </div>
 <div class="product-card">
 
-    <img id="gau-vang-main"
-         src="images/gau-vang-1.jpg"
-         alt="Bộ ngủ Gấu Vàng Caro">
+    <img id="gau-cam-main"
+         src="images/gau-cam-1.jpg"
+         alt="Bộ ngủ Gấu Cam">
 
     <div class="thumbnail-list">
 
-    <img src="images/gau-vang-1.jpg"
-         onclick="document.getElementById('gau-vang-main').src='images/gau-vang-1.jpg'">
+    <img src="images/gau-cam-1.jpg"
+         onclick="document.getElementById('gau-cam-main').src='images/gau-cam-1.jpg'">
 
-    <img src="images/gau-vang-2.jpg"
-         onclick="document.getElementById('gau-vang-main').src='images/gau-vang-2.jpg'">
+    <img src="images/gau-cam-2.jpg"
+         onclick="document.getElementById('gau-cam-main').src='images/gau-cam-2.jpg'">
 
-    <img src="images/gau-vang-3.jpg"
-         onclick="document.getElementById('gau-vang-main').src='images/gau-vang-3.jpg'">
+    <img src="images/gau-cam-3.jpg"
+         onclick="document.getElementById('gau-cam-main').src='images/gau-cam-3.jpg'">
 
 </div>
 
-    <h3>🧸💛 Bộ ngủ Gấu Vàng Caro</h3>
+    <h3>🧸💛 Bộ ngủ Gấu Cam</h3>
 
     <p>
         <del>169.000đ</del><br>
