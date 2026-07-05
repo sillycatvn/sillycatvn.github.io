@@ -115,13 +115,14 @@ ${total.toLocaleString("vi-VN")} đ
 Ghi chú:
 ${note}`;
 
-    const url =
-"https://zalo.me/0399597209";
+   navigator.clipboard.writeText(message);
 
+alert(
+    "Thông tin đơn hàng đã được sao chép!\n\n" +
+    "Sau khi Zalo mở ra, hãy nhấn Ctrl + V để gửi cho shop."
+);
 
-    window.open(url);
-
-}
+window.open("https://zalo.me/84399597209");
 
 </script>
 
