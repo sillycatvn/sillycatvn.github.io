@@ -84,25 +84,31 @@ document.getElementById("total").innerHTML =
 total.toLocaleString("vi-VN") +
 " đ";
 
-function orderZalo(){
+function orderZalo() {
 
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const address = document.getElementById("address").value;
     const note = document.getElementById("note").value;
 
-    let products = "";
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    cart.forEach(item=>{
-        products += item.name + " - ";
+    let products = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        products += item.name + " - " +
+                    item.price.toLocaleString("vi-VN") + "đ\n";
+
+        total += item.price;
     });
 
-    const message =
-`ĐƠN HÀNG MỚI
+const message = `
+ĐƠN HÀNG MỚI
 
 Khách hàng: ${name}
 
-SĐT: ${phone}
+SDT: ${phone}
 
 Địa chỉ: ${address}
 
@@ -116,16 +122,20 @@ Ghi chú:
 ${note}
 `;
 
-   navigator.clipboard.writeText(message);
+navigator.clipboard.writeText(message)
+.then(() => {
+    alert(
+        "Thông tin đơn hàng đã được sao chép!\n\n" +
+        "Sau khi Zalo mở ra, hãy nhấn Ctrl + V để gửi cho shop."
+    );
 
-alert(
-    "Thông tin đơn hàng đã được sao chép!\n\n" +
-    "Sau khi Zalo mở ra, hãy nhấn Ctrl + V để gửi cho shop."
-);
-
-window.open("https://zalo.me/84399597209");
+    window.open("https://zalo.me/84399597209", "_blank");
+})
+.catch(err => {
+    console.error(err);
+    alert("Không thể sao chép đơn hàng!");
+});
 }
-
 </script>
 
 </body>
